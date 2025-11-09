@@ -4,14 +4,14 @@ import './App.css'
 
 
 // Example password - you can change this
-const PASSWORD = 'birthday2024'
+const PASSWORD = '212'
 const BIRTHDAY_PERSON = 'shahoda' // Change this to the person's name
 
 // Calculate target date for November 27th (current year or next year if date has passed)
 const getTargetDate = () => {
   const now = new Date()
   const currentYear = now.getFullYear()
-  const targetDate = new Date(`${currentYear}-11-9T00:00:00`)
+  const targetDate = new Date(`${currentYear}-11-27T00:00:00`)
   
   // If November 27th has passed this year, use next year
 //   if (targetDate < now) {
@@ -303,7 +303,7 @@ function MusicPlayer({ daysRemaining }) {
       >
         <div className="music-player-container">
           <div className="music-player-info">
-            <div className="music-player-title">🎵 Music Player</div>
+            {/* <div className="music-player-title">🎵 Music Player</div> */}
             <div className="music-player-track">
               <div className="track-name">No songs added yet</div>
               <div className="track-artist">Add songs to the SONGS_LIST in the source code</div>
@@ -330,7 +330,7 @@ function MusicPlayer({ daysRemaining }) {
       >
         <div className="music-player-container">
           <div className="music-player-info">
-            <div className="music-player-title">🎵 Music Player</div>
+            {/* <div className="music-player-title">🎵 Music Player</div> */}
             <div className="music-player-track">
               {/* <div className="track-name">Songs will start when less than 18 days remain</div> */}
               {/* <div className="track-artist">First song unlocks when {Math.ceil(daysRemaining)} days remain</div> */}
@@ -386,7 +386,7 @@ function MusicPlayer({ daysRemaining }) {
               : currentTrackIndex >= 0
                 ? `Song ${currentTrackIndex + 1} of ${songs.length} - ${unlockedSongs.length} unlocked`
                 : daysRemaining >= 18
-                  ? `Songs unlock when less than 18 days remain`
+                  ? `Are you ready for what is coming?`
                   : 'All songs unlocked!'}
           </div>
           {songToPlay && (
@@ -700,7 +700,7 @@ function App() {
             }}
             className="password-hint"
           >
-            💡 Hint: Think of a special day... "birthday2024"
+            {/* 💡 Hint: Think of a special day... "birthday2024" */}
           </motion.p>
         </motion.div>
       </div>
