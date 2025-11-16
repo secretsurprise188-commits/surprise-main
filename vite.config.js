@@ -8,8 +8,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Surprise App',          // Full app name
-        short_name: 'Surprise',        // Short name for home screen
+        name: 'shahoda App',          // Full app name
+        short_name: 'shahoda',        // Short name for home screen
         start_url: '.',                // Start URL
         display: 'standalone',         // Open without browser UI
         background_color: '#ffffff',
