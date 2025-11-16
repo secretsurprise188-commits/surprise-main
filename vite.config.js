@@ -8,7 +8,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Shahoda App',          // Full app name
+        name: 'Shahoda',          // Full app name
         short_name: 'Shahoda',        // Short name for home screen
         start_url: '.',                // Start URL
         display: 'standalone',         // Open without browser UI
