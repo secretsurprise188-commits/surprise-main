@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'// https://vitejs.dev/config/
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  plugins: [react() ,tailwindcss(),
+  plugins: [react(), tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
