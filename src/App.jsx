@@ -15,7 +15,7 @@ const numOfDays=8
 const getTargetDate = () => {
   const now = new Date()
   const currentYear = now.getFullYear()
-  const targetDate = new Date(`${currentYear}-11-19T00:00:00`)
+  const targetDate = new Date(`${currentYear}-11-21T00:00:00`)
   
   // If November 27th has passed this year, use next year
 //   if (targetDate < now) {
@@ -1046,15 +1046,17 @@ function App() {
   }
 
   // Show full birthday celebration when countdown ends
+  // overflow-x-hidden overflow-y-auto fixed inset-0
   return (
-    <div className='p-20'>
-    <div className="celebration-gui h-screen overflow-x-hidden overflow-y-auto fixed inset-0">
+    <div className='p-20 '>
+      
+    <div className="celebration-gui h-screen ">
         <div className="birthday-app ">
       <div className="containerForGallery relative">
       {/* Gallery positioned absolutely over everything */}
-      <div className="absolute inset-0 w-full pointer-events-none" style={{ zIndex: 50 }}>
-        <Gallery />
-      </div>
+         <div className="absolute inset-0 w-full pointer-events-none" style={{ zIndex: 50 }}>
+           <Gallery />
+         </div>
 
       <AnimatePresence>
         {showCelebration && (
@@ -1140,7 +1142,7 @@ function App() {
       </div>
 
 
-      <div className="celebration-content flex flex-col items-center justify-center gap-8 relative px-8 py-12 md:p-10 lg:p-14">
+      <div className="celebration-content flex flex-col  gap-8  w-full  p-20 justify-center items-center mx-auto">
         <motion.h1
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -1238,10 +1240,10 @@ function App() {
         {/* Music Player with all songs unlocked */}
         <Messages daysRemaining={songDaysRemaining} numOfDays={numOfDays} />
 
-        <MusicPlayer daysRemaining={-1} numOfDays={numOfDays} className="w-1/2"/>
+        <MusicPlayer daysRemaining={-1} numOfDays={numOfDays} />
       </div>
-      
-    </div>
+
+      </div>
     </div>
     </div>
   )
