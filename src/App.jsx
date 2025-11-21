@@ -15,7 +15,7 @@ const numOfDays=8
 const getTargetDate = () => {
   const now = new Date()
   const currentYear = now.getFullYear()
-  const targetDate = new Date(`${currentYear}-11-21T00:00:00`)
+  const targetDate = new Date(`${currentYear}-11-23T00:00:00`)
   
   // If November 27th has passed this year, use next year
 //   if (targetDate < now) {
@@ -32,30 +32,30 @@ const TARGET_DATE = getTargetDate()
 // First song unlocks when less than numOfDays days remain (daysRemaining < numOfDays)
 // Format: { id: number, title: 'Song Title', artist: 'Artist Name', url: 'song-url-here', lyrics: 'lyrics-here' }
 // Note: For YouTube Music URLs, they will be embedded. For direct audio playback, use MP3/MP4 URLs.
-const SONGS_LIST = [
+// const SONGS_LIST = [
 
 
-  { id: 1, title: 'Ya Aashikata El Wardi', url: 'https://music.youtube.com/watch?v=dDIyA7Gk7kY' },
+//   { id: 1, title: 'Ya Aashikata El Wardi', url: 'https://music.youtube.com/watch?v=dDIyA7Gk7kY' },
 
 
-  { id: 2, title: 'Habibty Malak', url: 'https://music.youtube.com/watch?v=qD_O19z1I3s' },
+//   { id: 2, title: 'Habibty Malak', url: 'https://music.youtube.com/watch?v=qD_O19z1I3s' },
   
-  { id: 3, title: 'Koun', url: 'https://music.youtube.com/watch?v=RPspk7dn6Bs' },
+//   { id: 3, title: 'Koun', url: 'https://music.youtube.com/watch?v=RPspk7dn6Bs' },
   
-  { id: 4, title: 'Ana La Habibi', url: 'https://music.youtube.com/watch?v=5UAMf21kPk4' },
-  
-  
-  { id: 5, title: 'BETEWHASHEINY', url: 'https://music.youtube.com/watch?v=wzKEejABhKI' },
+//   { id: 4, title: 'Ana La Habibi', url: 'https://music.youtube.com/watch?v=5UAMf21kPk4' },
   
   
-  { id: 6, title: 'Lama Tkooni', url: 'https://music.youtube.com/watch?v=m64Vu9zQgv8' },
+//   { id: 5, title: 'BETEWHASHEINY', url: 'https://music.youtube.com/watch?v=wzKEejABhKI' },
+  
+  
+//   { id: 6, title: 'Lama Tkooni', url: 'https://music.youtube.com/watch?v=m64Vu9zQgv8' },
 
 
-  { id: 7, title: 'Sabran', url: 'https://music.youtube.com/watch?v=2NhTlnSRYos' },
+//   { id: 7, title: 'Sabran', url: 'https://music.youtube.com/watch?v=2NhTlnSRYos' },
 
   
   
-  { id: 8, title: 'بيكلموني', url: 'https://music.youtube.com/watch?v=3AIj4sov72c' },
+//   { id: 8, title: 'بيكلموني', url: 'https://music.youtube.com/watch?v=3AIj4sov72c' },
 
   
   
@@ -87,21 +87,21 @@ const SONGS_LIST = [
 
   
   // TODO: Add your 18 songs above (uncomment and fill in)
-]
+// ]
 
 // Messages list - numOfDays messages total
 // Last message (message numOfDays) will appear ON the deadline day (at celebration)
 // First message appears when less than numOfDays days remain (daysRemaining < numOfDays)
 // Format: { id: number, message: 'Your message text here' }
-const MESSAGES_LIST = [
-  { id: 1, message: 'Day 1: The countdown begins! Something special is coming...' },
-  { id: 2, message: 'Day 2: Every day brings us closer to something amazing!' },
-  { id: 3, message: 'Day 3: The anticipation is building...' },
-  { id: 4, message: 'Day 4: Each moment is a step closer to the surprise!' },
-  { id: 5, message: 'Day 5: The excitement grows with every passing day!' },
-  { id: 6, message: 'Day 6: Halfway there, and the best is yet to come!' },
-  { id: 7, message: 'Day 7: A week closer to something wonderful!' },
-  { id: 8, message: 'Day 8: The journey continues, full of surprises!' },
+// const MESSAGES_LIST = [
+//   { id: 1, message: 'Day 1: The countdown begins! Something special is coming...' },
+//   { id: 2, message: 'Day 2: Every day brings us closer to something amazing!' },
+//   { id: 3, message: 'Day 3: The anticipation is building...' },
+//   { id: 4, message: 'Day 4: Each moment is a step closer to the surprise!' },
+//   { id: 5, message: 'Day 5: The excitement grows with every passing day!' },
+//   { id: 6, message: 'Day 6: Halfway there, and the best is yet to come!' },
+//   { id: 7, message: 'Day 7: A week closer to something wonderful!' },
+//   { id: 8, message: 'Day 8: The journey continues, full of surprises!' },
   // { id: 9, message: 'Day 9: Every day is a new chapter in this story!' },
   // { id: 10, message: 'Day 10: The countdown is getting exciting!' },
   // { id: 11, message: 'Day 11: Almost there, something amazing awaits!' },
@@ -113,7 +113,7 @@ const MESSAGES_LIST = [
   // { id: 17, message: 'Day 17: Tomorrow is the day!' },
   // { id: 18, message: 'Day 18: Today is the day! Happy Birthday! 🎉🎂🎈' },
   // TODO: Add your messages above (you can customize each message)
-]
+// ]
 
 // Messages Component
 // function Messages({ daysRemaining }) {
@@ -1046,11 +1046,11 @@ function App() {
   }
 
   // Show full birthday celebration when countdown ends
-  // overflow-x-hidden overflow-y-auto fixed inset-0
   return (
     <div className='p-20 '>
       
-    <div className="celebration-gui h-screen ">
+    
+    <div className="celebration-gui h-screen overflow-x-hidden overflow-y-auto fixed inset-0 ">
         <div className="birthday-app ">
       <div className="containerForGallery relative">
       {/* Gallery positioned absolutely over everything */}
